@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano del Pasillo</title>
+    <style>
+        :root{
+            --color-pasillo: #d5d7fe;
+            --color-puerta: #ff0037;
+            --color-radiador: #7f8c8d;
+            --color-ventana:#04eeff;
+            --color-puerta-ext: #cdff07;
+            --color-fondo:#fbfcfc;
+            --color-letra:#030303;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color:var(--color-fondo);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 50em;
+            margin: 0;
+        }
+
+        .plano-pasillo {
+            position: relative;
+            width: 200px;
+            height: 600px;
+            background-color:var(--color-pasillo);
+            border: 4px solid #333;
+            
+        }
+
+        .elemento {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: bold;
+            color:var(--color-letra);
+            text-align: center;
+            border: 2px solid #222;
+            box-sizing: border-box;
+            padding: 2px;
+        }
+
+        .puerta-exterior {
+            top: 20px;
+            left: -2px;
+            width: 25px;
+            height: 70px;
+            background-color:var(--color-puerta-ext);
+        }
+
+        .radiador-1 { 
+            top: 100px; 
+            left: -2px; 
+            width: 40px; 
+            height: 50px; 
+            background-color:var(--color-radiador)
+        }
+        .radiador-2 { 
+            top: 200px; 
+            left: -2px; 
+            width: 40px; 
+            height: 50px; 
+            background-color:var(--color-radiador);
+        }
+        .radiador-3 { 
+            top: 300px; 
+           left: -2px; 
+            width: 40px; 
+            height: 50px; 
+            background-color:var(--color-radiador);
+        }
+      
+        .ventana {
+            top: 100px;
+            left: -2px;
+            width: 10px;
+            height: 350px;
+            background-color:var(--color-ventana);
+            color: var(--color-letra);
+        }
+
+        .puerta-1 {
+            top: 80px;
+            right: -2px;
+            width: 25px;
+            height: 60px;
+            background-color:var(--color-puerta);
+        }
+
+        .puerta-2 {
+            top: 210px;
+            right: -2px;
+            width: 25px;
+            height: 60px;
+            background-color: var(--color-puerta);
+        }
+
+        .puerta-3 {
+            top: 290px;
+            right: -2px;
+            width: 25px;
+            height: 60px;
+            background-color: var(--color-puerta);
+        }
+
+        .puerta-4 {
+            top: 370px;
+            right: -2px;
+            width: 25px;
+            height: 60px;
+            background-color:var(--color-puerta);
+            color: var(--color-letra);
+        }
+
+        .zona-L {
+            position: absolute;
+            bottom: -4px;
+            left: -204px;
+            width: 400px;
+            height: 140px;
+            background-color: var(--color-pasillo);
+
+            border-top: 0px solid #333;
+            border-left: 4px solid #333;
+            border-bottom: 4px solid #333;
+            border-right: 4px solid #333;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color:var(--color-letra);
+            font-weight: bold;
+        }
+        .zona-L::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px; 
+    height: 4px;
+    background-color:var(--color-letra);
+}
+    </style>
+</head>
+<body>
+
+    <div class="plano-pasillo">
+        
+        <div class="elemento puerta-exterior">Puerta Exterior</div>
+        <div class="elemento radiador-1">Rad.</div>
+        <div class="elemento radiador-2">Rad.</div>
+        <div class="elemento radiador-3">Rad.</div>
+        <div class="elemento ventana">Ventana</div>
+
+        
+        <div class="elemento puerta-1">Puerta</div>
+        <div class="elemento puerta-2">Puerta</div>
+        <div class="elemento puerta-3">Puerta</div>
+        <div class="elemento puerta-4">Puerta</div>
+
+        
+        <div class="zona-L">Pasillo L</div>
+    </div>
+
+</body>
+</html>
